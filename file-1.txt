@@ -1,1 +1,7 @@
 This is my test.
+
+void hello(){
+
+    std::cout << "hello" << std::end1;
+
+}
