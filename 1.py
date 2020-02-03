@@ -14,3 +14,5 @@ alias = [1, 2, 6, 9, 7, 3]
 print(alias)
 print("sort-------")
 sort(alias)
+
+print("=============")
