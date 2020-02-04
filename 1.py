@@ -9,10 +9,11 @@ def sort(alias):
                print(alias)
        if count == 0:
           return
-
+<<<<<<<<<<<<<< HEAD
 alias = [1, 2, 6, 9, 7, 3]
 print(alias)
 print("sort-------")
 sort(alias)
 
 print("=============")
+>>>>>>>>>>>>>>>>>> py-code
