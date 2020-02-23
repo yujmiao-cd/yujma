@@ -18,5 +18,16 @@ def simplofyPath(path):
 
 print(simplofyPath('/home/'))
 print(simplofyPath('/a/./b/../../c/'))
+'''
+a  .  b  ..  ..  c
 
+1. [a]       a
+2. [a]       .
+3. [a, b]    b
+4. [a]       ..
+5. []        ..
+6. [c]       c
+
+
+'''
 
