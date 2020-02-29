@@ -1,0 +1,38 @@
+from pathlib import Path
+import argparse
+
+def showdir(path):
+    p = Path(path)
+    for file in p.iterdir():
+        print (file)
+
+parser = argparse.ArgumentParser(prog='ls', add_help=True) # 构造解析器
+parser.add_argument('path')  #  位置参数
+parser.add_argument('-l')
+parser.add_argument('-a','--all')
+
+# ls [path] [-l] [-a]
+if __name__ == '__main__':
+    # showdir('/Users/angleyu/PYDemo/')
+    args = parser.parse_args("/etc".split())
+    parser.print_help()
+    
+
+'''
+ls [-h] path
+-h 为帮助，可有可无
+path 为位置参数，必须提供
+
+usage: ls [-h] [-l L] [-a ALL] path
+
+positional arguments:
+  path
+
+optional arguments:
+  -h, --help         show this help message and exit
+  -l L
+  -a ALL, --all ALL
+
+Process finished with exit code 0
+
+'''
