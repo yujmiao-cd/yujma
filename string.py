@@ -1,20 +1,23 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
+num = ""
+while True:
+    num = input("Please input a num:").strip().lstrip('0')
+    if num.isdigit():
+        num = str(num)
+        break
+    else:
+        print("Not normal number ~ ")
 
-'''
-对于给定的一个source 字符串和target 字符串
-在 source 中找出 第一个 target 出现的位置。如果不存在，返回-1
+count = [0]*10   # 0-9
 
-'''
+for i in range(10):
+    count[i] = num.count(str(i))
 
-def strStr(source,target):
-    if (source is None) or (target is None):
-        return -1
-    for i in range(len(source)-len(target)+1):
-        if source[i:i + len(target)] == target:
-            return i
-    return -1
+for i in range(10):
+    if count[i]:
+        print("{} 出现的次数是 {} 次.".format(i,count[i]))
 
-
-print(strStr('source','target'))
-print(strStr('abcdabcdefg','bcd'))
+lst = list(num)
+lst.reverse()
+print(" 列表反转的结果是 {}:".format(lst))
