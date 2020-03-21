@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import re
+
+# s = '''bottle\nbag\nbig\napple'''
+#
+# regex = re.compile('b\wg')
+#
+# print(regex.sub('angleyu', s, 1))
+#
+# print()
+#
+# print(regex.subn('angleyu', s, 1))
+
+s = ''' os.path([path])'''
+
+regex = re.compile('[\.\(\)\[\]]')
+
+new_str = regex.sub(' ', s)
+
+new_str = regex.subn(' ', s, 3)
+print(new_str)
+
+
+
